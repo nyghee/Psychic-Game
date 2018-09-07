@@ -6,11 +6,50 @@
 
     <script src="assets/javascript/game.js"></script>
 
-    Guess what letter I'm thinking of
+    <h1>Psychic Game</h1>
+    <h3>Guess what letter I'm thinking of</h3>
+    <div>
+        <p id= "Wins">Wins:</p>
+        <p id= "Losses">Losses:</p>
+        <p id= "Guesses left">Guesses left:</p>
+        <p id= "Your guesses so far">Your guesses so far:</p>
+    </div>
+</body>
+<script type="text/javascript">
 
-    Wins:
-    Losses:
-    Guesses left:
-    
-    Your guesses so far:
+//create the array so the computer can choose a letter randomly
+var compThought = ["abcdefghijklmnopqrstuvwxyz".split("")]
+
+// create variables to start with.
+//
+var Wins = 0;
+var Losses = 0;
+var remainingGuesses = 9;
+var soFar = "";
+
+// make what's displayed on the screen (p ids) managable in the script using document .getElementById function
+// this is the text for the score
+var Wins = document.getElementById("Wins");
+var Losses = document.getElementById("Losses");
+var guessText = document.getElementById("Guesses left");
+var soFarText = document.getElementById("Guesses so far");
+
+document.onkeyup = function(event) {
+
+    // When the user guesses a letter
+    var userGuess = event.key;
+
+    // Get the computer to choose a letter randomly.
+    var compGuess = compThought[Math.floor(Math.random() * compThought.length)];
+
+        if (soFarText ==== compThought) {
+            wins++
+        }
+        else (soFarText !== compThought)
+            
+
+        }
+    }
+}
+
 </body>
